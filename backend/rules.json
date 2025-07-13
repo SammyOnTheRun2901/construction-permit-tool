@@ -1,0 +1,21 @@
+{
+  "Norway": [
+    {
+      "code": "TEK17-5.2",
+      "description": "Minimum ceiling height is 2.4m.",
+      "type": "pass"
+    },
+    {
+      "code": "TEK17-10.1",
+      "description": "Staircases must have handrails.",
+      "type": "warning"
+    }
+  ],
+  "Denmark": [
+    {
+      "code": "BR18-2.1",
+      "description": "Fire safety must be documented.",
+      "type": "fail"
+    }
+  ]
+}
