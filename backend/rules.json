@@ -1,21 +1,78 @@
 {
-  "Norway": [
-    {
-      "code": "TEK17-5.2",
-      "description": "Minimum ceiling height is 2.4m.",
-      "type": "pass"
-    },
-    {
-      "code": "TEK17-10.1",
-      "description": "Staircases must have handrails.",
-      "type": "warning"
-    }
-  ],
   "Denmark": [
     {
+      "code": "BR18-FAR",
+      "field": "far",
+      "description": "FAR must not exceed 1.2.",
+      "max": 1.2
+    },
+    {
+      "code": "BR18-PARK",
+      "field": "parkingSpaces",
+      "description": "At least 2 parking spaces required.",
+      "min": 2
+    },
+    {
+      "code": "BR18-ACC",
+      "field": "accessibleEntrances",
+      "description": "At least one accessible entrance required.",
+      "min": 1
+    },
+    {
       "code": "BR18-2.1",
+      "field": "ceilingHeight",
+      "description": "Ceiling height must be at least 2.3m.",
+      "min": 2.3
+    },
+    {
+      "code": "BR18-5.2",
+      "field": "handrails",
+      "description": "Staircase handrails must be present.",
+      "required": true
+    },
+    {
+      "code": "BR18-8.1",
+      "field": "fireSafety",
       "description": "Fire safety must be documented.",
-      "type": "fail"
+      "required": true
+    }
+  ],
+  "Norway": [
+    {
+      "code": "TEK17-FAR",
+      "field": "far",
+      "description": "FAR must not exceed 1.2.",
+      "max": 1.2
+    },
+    {
+      "code": "TEK17-PARK",
+      "field": "parkingSpaces",
+      "description": "At least 2 parking spaces required.",
+      "min": 2
+    },
+    {
+      "code": "TEK17-ACC",
+      "field": "accessibleEntrances",
+      "description": "At least one accessible entrance required.",
+      "min": 1
+    },
+    {
+      "code": "TEK17-2.1",
+      "field": "ceilingHeight",
+      "description": "Ceiling height must be at least 2.4m.",
+      "min": 2.4
+    },
+    {
+      "code": "TEK17-5.2",
+      "field": "handrails",
+      "description": "Staircase handrails must be present.",
+      "required": true
+    },
+    {
+      "code": "TEK17-8.1",
+      "field": "fireSafety",
+      "description": "Fire safety must be documented.",
+      "required": true
     }
   ]
 }
