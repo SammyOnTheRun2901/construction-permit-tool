@@ -43,7 +43,17 @@
   <div *ngIf="error" class="error" style="color: red; margin-top: 1em;">
     <mat-icon>error</mat-icon> {{error}}
   </div>
-
+  <!-- Add inside .container, after the main form and before/after results -->
+  <div class="action-row" style="margin-top:1em;">
+    <button mat-raised-button color="accent" (click)="getAISuggestion()" [disabled]="suggestionLoading || form.invalid">
+      {{ suggestionLoading ? 'Getting AI Suggestions...' : 'Get AI Suggestions' }}
+    </button>
+  </div>
+  <div *ngIf="aiSuggestion" class="ai-suggestion" style="margin-top:1em;">
+    <mat-icon color="accent">lightbulb</mat-icon>
+    <strong>AI Suggestion:</strong>
+    <div>{{ aiSuggestion }}</div>
+  </div>
   <table mat-table [dataSource]="results" class="mat-elevation-z8" *ngIf="results.length" style="margin-top: 2em;">
     <ng-container matColumnDef="regulation">
       <th mat-header-cell *matHeaderCellDef> Regulation </th>

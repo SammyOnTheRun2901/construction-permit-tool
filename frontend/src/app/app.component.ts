@@ -32,6 +32,8 @@ export class AppComponent {
   error = '';
   results: any[] = [];
   displayedColumns: string[] = ['regulation', 'result', 'notes'];
+  aiSuggestion: string = '';
+  suggestionLoading = false;
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.form = this.fb.group({
@@ -61,6 +63,21 @@ export class AppComponent {
       error: err => {
         this.loading = false;
         this.error = 'Error connecting to backend.';
+      }
+    });
+  }
+
+  getAISuggestion() {
+    this.suggestionLoading = true;
+    this.aiSuggestion = '';
+    this.http.post<any>('http://localhost:5000/suggest', { form_data: this.form.value }).subscribe({
+      next: res => {
+        this.aiSuggestion = res.suggestion;
+        this.suggestionLoading = false;
+      },
+      error: err => {
+        this.aiSuggestion = 'Failed to get AI suggestion.';
+        this.suggestionLoading = false;
       }
     });
   }
